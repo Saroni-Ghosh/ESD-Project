@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Employment & Skill Development App</title>
+   <link rel="stylesheet" href="esd.css" />
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header>
+   <img src="./esdlogo.png" alt="Company Logo" class="logo" />
+   <h1>Employment & Skill Development</h1>
+   <div class="accessibility-controls">
+       <button id="decrease-font" aria-label="Decrease font size">A-</button>
+       <button id="increase-font" aria-label="Increase font size">A+</button>
+       <button id="theme-toggle" aria-label="Toggle dark or light theme" aria-pressed="false">Toggle Theme</button>
+   </div>
+</header>
+
+<main id="main-content">
+   <main id="login-page" role="region" aria-labelledby="login">
+       <section id="login">
+           <h2 id="login">Login</h2>
+           <form id="login-form" aria-describedby="login-error">
+               <label for="username">Username:</label>
+               <input type="text" id="username" name="username" required aria-required="true" />
+               <label for="password">Password:</label>
+               <input type="password" id="password" name="password" required aria-required="true" />
+               <button type="submit">Login</button>
+           </form>
+           <p id="login-error" aria-live="polite" style="color: red;"></p>
+       </section>
+   </main>
+
+   <main id="app-content" style="display: none;">
+       <nav role="navigation" aria-label="Main navigation">
+           <ul>
+               <li><a href="#" onclick="showSection('home')">Home</a></li>
+               <li><a href="#" onclick="showSection('core-branches')">Core Branches</a></li>
+               <li><a href="#" onclick="showSection('vocational-training')">Vocational Training</a></li>
+               <li><a href="#" onclick="showSection('online-courses')">Online Courses</a></li>
+               <li><a href="#" onclick="showSection('ats-score')">ATS Score</a></li>
+               <li><a href="#" onclick="showSection('accessibility-skills')">Accessibility Skills</a></li>
+           </ul>
+       </nav>
+
+       <!-- Home Section -->
+       <section id="home">
+           <h2>Welcome to our app!</h2>
+           <p>This app provides resources for employment and skill development.</p>
+           <ul>
+               <li><a href="#" onclick="showSubsection('about-us')">About Us</a></li>
+               <li><a href="#" onclick="showSubsection('features')">Features</a></li>
+           </ul>
+           <div id="about-us" class="subsection">
+               <h3>About Us</h3>
+               <p>We provide career guidance and skill-building opportunities.</p>
+           </div>
+           <div id="features" class="subsection">
+               <h3>Features</h3>
+               <p>Interactive learning, certification, job placement assistance.</p>
+           </div>
+       </section>
+
+       <!-- Core Branches -->
+       <section id="core-branches" style="display: none;">
+           <h2>Core Branches</h2>
+           <ul>
+               <li><a href="#" onclick="showSubsection('engineering')">Engineering</a></li>
+               <li><a href="#" onclick="showSubsection('medicine')">Medicine</a></li>
+               <li><a href="#" onclick="showSubsection('law')">Law</a></li>
+           </ul>
+           <div id="engineering" class="subsection">
+               <h3>Engineering</h3>
+               <p>Learn mechanical, electrical, and software engineering skills.</p>
+           </div>
+           <div id="medicine" class="subsection">
+               <h3>Medicine</h3>
+               <p>Explore medical sciences and healthcare training programs.</p>
+           </div>
+           <div id="law" class="subsection">
+               <h3>Law</h3>
+               <p>Understand legal studies and corporate law fundamentals.</p>
+           </div>
+       </section>
+
+       <!-- Vocational Training -->
+       <section id="vocational-training" style="display: none;">
+           <h2>Vocational Training</h2>
+           <ul>
+               <li><a href="#" onclick="showSubsection('plumbing')">Plumbing</a></li>
+               <li><a href="#" onclick="showSubsection('carpentry')">Carpentry</a></li>
+               <li><a href="#" onclick="showSubsection('electrical-work')">Electrical Work</a></li>
+           </ul>
+           <div id="plumbing" class="subsection">
+               <h3>Plumbing</h3>
+               <p>Learn pipe fitting, leak repair, and system installation.</p>
+           </div>
+           <div id="carpentry" class="subsection">
+               <h3>Carpentry</h3>
+               <p>Master woodworking, framing, and finish carpentry skills.</p>
+           </div>
+           <div id="electrical-work" class="subsection">
+               <h3>Electrical Work</h3>
+               <p>Study wiring, circuit design, and safety protocols.</p>
+           </div>
+       </section>
+
+       <!-- Online Courses Section -->
+       <section id="online-courses" style="display: none;">
+           <h2>Online Courses</h2>
+           <ul>
+               <li><a href="#" onclick="showSubsection('course-python')">Python Basics</a></li>
+               <li><a href="#" onclick="showSubsection('course-web')">Web Development</a></li>
+               <li><a href="#" onclick="showSubsection('course-data')">Data Science</a></li>
+               <li><a href="#" onclick="showSubsection('course-ml')">Machine Learning</a></li>
+               <li><a href="#" onclick="showSubsection('course-blockchain')">Blockchain & Web3</a></li>
+               <li><a href="#" onclick="showSubsection('course-softskills')">Soft Skills & Communication</a></li>
+               <li><a href="#" onclick="showSubsection('course-career')">Career Prep & Aptitude</a></li>
+           </ul>
+           <div id="course-python" class="subsection">
+               <h3>Python Basics</h3>
+               <p>This course covers the fundamentals of Python programming.</p>
+           </div>
+           <div id="course-web" class="subsection">
+               <h3>Web Development</h3>
+               <p>Learn HTML, CSS, and JavaScript to build websites.</p>
+           </div>
+           <div id="course-data" class="subsection">
+               <h3>Data Science</h3>
+               <p>Explore data analysis, visualization, and ML tools.</p>
+           </div>
+           <div id="course-ml" class="subsection">
+               <h3>Machine Learning</h3>
+               <p>Learn supervised, unsupervised, and neural network models.</p>
+           </div>
+           <div id="course-blockchain" class="subsection">
+               <h3>Blockchain & Web3</h3>
+               <p>Understand DApps, Ethereum, smart contracts, and tokenomics.</p>
+           </div>
+           <div id="course-softskills" class="subsection">
+               <h3>Soft Skills & Communication</h3>
+               <p>Improve interpersonal communication, email etiquette, and teamwork.</p>
+           </div>
+           <div id="course-career" class="subsection">
+               <h3>Career Preparation & Aptitude</h3>
+               <p>Practice quantitative aptitude, reasoning, and mock interviews.</p>
+           </div>
+       </section>
+
+       <!-- ATS Score Section -->
+       <section id="ats-score" style="display: none;">
+           <h2>ATS Score</h2>
+           <p>ATS (Applicant Tracking System) score helps measure how well your resume matches a job description.</p>
+           <ul>
+               <li><a href="#" onclick="showSubsection('ats-details')">ATS Score Details</a></li>
+               <li><a href="#" onclick="showSubsection('ats-calculator')">Calculate ATS Score</a></li>
+           </ul>
+           <div id="ats-details" class="subsection">
+               <h3>ATS Score Details</h3>
+               <p>The ATS score is based on keyword matching. A score over 80% increases shortlisting chances.</p>
+           </div>
+           <div id="ats-calculator" class="subsection">
+               <h3>ATS Score Calculator</h3>
+               <form id="ats-form">
+                   <label for="job-description">Job Description:</label>
+                   <textarea id="job-description" name="job-description" required></textarea>
+                   <label for="resume">Your Resume (Skills/Keywords):</label>
+                   <textarea id="resume" name="resume" required></textarea>
+                   <button type="submit">Calculate ATS Score</button>
+               </form>
+               <p id="ats-result"></p>
+           </div>
+       </section>
+
+       <!-- Accessibility Skills Section -->
+       <section id="accessibility-skills" style="display: none;">
+           <h2>Skills for Visually Impaired Students</h2>
+           <ul>
+               <li><a href="#" onclick="showSubsection('screen-readers')">Screen Reader Navigation</a></li>
+               <li><a href="#" onclick="showSubsection('keyboard-shortcuts')">Keyboard Shortcuts</a></li>
+               <li><a href="#" onclick="showSubsection('braille')">Braille & Tactile Graphics</a></li>
+               <li><a href="#" onclick="showSubsection('audio-programming')">Audio-based Programming</a></li>
+               <li><a href="#" onclick="showSubsection('speech-to-text')">Speech-to-Text Tools</a></li>
+               <li><a href="#" onclick="showSubsection('accessible-resume')">Accessible Resume Builders</a></li>
+               <li><a href="#" onclick="showSubsection('online-communication')">Online Communication Tools</a></li>
+           </ul>
+
+           <div id="screen-readers" class="subsection">
+               <h3>Screen Reader Navigation</h3>
+               <p>Using screen readers like NVDA or JAWS to navigate websites and applications efficiently.</p>
+           </div>
+           <div id="keyboard-shortcuts" class="subsection">
+               <h3>Keyboard Shortcuts</h3>
+               <p>Mastering keyboard commands to perform tasks without a mouse, improving speed and accessibility.</p>
+           </div>
+           <div id="braille" class="subsection">
+               <h3>Braille & Tactile Graphics</h3>
+               <p>Learning to use braille displays and tactile graphics for reading and understanding content.</p>
+           </div>
+           <div id="audio-programming" class="subsection">
+               <h3>Audio-based Programming</h3>
+               <p>Writing and debugging code using audio cues and speech synthesis tools.</p>
+           </div>
+           <div id="speech-to-text" class="subsection">
+               <h3>Speech-to-Text Tools</h3>
+               <p>Using voice recognition software to input text and control the computer.</p>
+           </div>
+           <div id="accessible-resume" class="subsection">
+               <h3>Accessible Resume Builders</h3>
+               <p>Creating resumes in ATS-friendly formats that are readable by assistive technologies.</p>
+           </div>
+           <div id="online-communication" class="subsection">
+               <h3>Online Communication Tools</h3>
+               <p>Utilizing accessible chat, email, and video conferencing tools designed for users with visual impairments.</p>
+           </div>
+       </section>
+   </main>
+</main>
+
+<footer>
+   <p>&copy; 2024 Employment & Skill Development</p>
+</footer>
+
+<script src="esd.js"></script>
+</body>
+</html>

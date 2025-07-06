@@ -1,0 +1,269 @@
+/* Global Styles */
+body {
+   font-family: Arial, sans-serif;
+   line-height: 1.6;
+   background-color: #f1f5f7;
+   color: #333;
+   margin: 0;
+   padding: 0;
+   transition: background-color 0.4s, color 0.4s;
+}
+
+body.dark-mode {
+   background-color: #1c1c1c;
+   color: #f5f5f5;
+}
+
+/* Text Color Overrides */
+h1, h2, h3, h4, h5, h6, p, a, li, label, span, input, textarea {
+   color: inherit;
+}
+
+body.dark-mode a:hover {
+   color: #ffd700;
+}
+
+/* Header */
+header {
+   background-color: #00155f;
+   color: #fff;
+   padding: 20px 10px;
+   text-align: center;
+   position: relative;
+}
+
+.logo {
+   max-width: 80px;
+   display: block;
+   margin: 0 auto 10px;
+}
+
+#theme-toggle {
+   position: absolute;
+   right: 10px;
+   top: 20px;
+   padding: 6px 12px;
+   background-color: #fff;
+   color: #60bc1a;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 14px;
+   transition: background-color 0.3s;
+}
+
+#theme-toggle:hover {
+   background-color: #62b1e9;
+   color: #fff;
+}
+
+/* Navigation */
+nav {
+   background-color: #62b1e9;
+   padding: 10px 0;
+   text-align: center;
+   transition: background-color 0.4s;
+}
+
+nav ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+nav ul li {
+   display: inline;
+   margin-right: 20px;
+}
+
+nav ul li a {
+   color: #fff;
+   text-decoration: none;
+   font-weight: bold;
+   transition: color 0.3s;
+}
+
+nav ul li a:hover {
+   text-decoration: underline;
+   color: #00155f;
+}
+
+/* Section Content */
+section {
+   margin: 20px;
+   padding: 20px;
+   border-radius: 8px;
+   background-color: #e1df60;
+   color: #000;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   animation: fadeIn 0.6s ease-in;
+   transition: background-color 0.4s, color 0.4s;
+}
+
+body.dark-mode section {
+   background-color: #4f4444;
+   color: #ffffff;
+}
+
+/* Subsection */
+.subsection {
+   margin-top: 15px;
+   padding: 10px;
+   background-color: #ffd6d6;
+   border-left: 5px solid #0a5f00;
+   animation: slideIn 0.5s ease;
+}
+
+body.dark-mode .subsection {
+   background-color: rgb(47, 172, 255);
+   border-left: 5px solid #62b1e9;
+}
+
+/* Accessibility Skills Section */
+#accessibility-skills {
+   background-color: #c1e1ff;
+   color: #000;
+   border-left: 6px solid #005288;
+   padding: 20px;
+   border-radius: 8px;
+   margin: 20px;
+   animation: fadeIn 0.6s ease-in-out;
+   transition: background-color 0.4s, color 0.4s;
+}
+
+body.dark-mode #accessibility-skills {
+   background-color: #1e2a38;
+   color: #f1f1f1;
+   border-left: 6px solid #62b1e9;
+}
+
+#accessibility-skills h3 {
+   margin-top: 25px;
+   color: #003366;
+}
+
+body.dark-mode #accessibility-skills h3 {
+   color: #dae7ef;
+}
+
+#accessibility-skills ul {
+   margin-left: 20px;
+   padding-left: 15px;
+   list-style-type: disc;
+}
+
+#accessibility-skills li {
+   margin-bottom: 10px;
+   line-height: 1.6;
+}
+
+/* Footer */
+footer {
+   background-color: #0596f8;
+   color: #fff;
+   text-align: center;
+   padding: 10px;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   transition: background-color 0.4s;
+}
+
+body.dark-mode footer {
+   background-color: burlywood;
+}
+
+/* Form Styling */
+form {
+   display: flex;
+   flex-direction: column;
+   width: 300px;
+   margin: 0 auto;
+}
+
+form label {
+   margin-bottom: 5px;
+   font-weight: bold;
+}
+
+form input,
+form textarea {
+   padding: 8px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   resize: vertical;
+   font-size: 14px;
+   color: inherit;
+   background-color: #fff;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+   background-color: #222;
+   color: #f5f5f5;
+   border-color: #555;
+}
+
+form button {
+   padding: 10px;
+   background-color: #2980b9;
+   color: white;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+form button:hover {
+   background-color: #60bc1a;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+   nav ul li {
+       display: block;
+       margin: 10px 0;
+   }
+
+   form {
+       width: 90%;
+   }
+
+   section {
+       margin: 10px;
+       padding: 15px;
+   }
+}
+
+/* Animations */
+@keyframes fadeIn {
+   from { opacity: 0; }
+   to { opacity: 1; }
+}
+
+@keyframes slideIn {
+   from {
+       transform: translateX(-30px);
+       opacity: 0;
+   }
+   to {
+       transform: translateX(0);
+       opacity: 1;
+   }
+}
+
+/* Web3 Course Specific Style */
+#course-blockchain {
+   background-size: cover;
+   background-repeat: no-repeat;
+   color: white;
+   padding: 20px;
+   font-weight: bold;
+   animation: fadeIn 1s ease-in-out;
+}
+
+body.dark-mode #course-blockchain {
+   color: #fcf8f8;
+   background-color:#4fb8ff;
+}
