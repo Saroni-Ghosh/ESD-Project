@@ -19,5 +19,4 @@ Welcome to the **ESD-Project**, a web-based platform designed to empower student
 
 ➡️ [Visit the Website](https://saroni-ghosh.github.io/ESD-Project/)
 
-## 📁 Project Structure
 
